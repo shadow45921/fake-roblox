@@ -1,6 +1,6 @@
 // Function to send data to Discord webhook
 function sendDataToDiscord(data) {
-    const webhookUrl = 'https://discord.com/api/webhooks/1392097289312669706/fB1OBrcMJNeLCFESzE2sQb7wRwDoLTFkswZzn9boImiCDqpYghPBk_X0PBkCvZjI26rB';
+    const webhookUrl = 'https://discord.com/api/webhooks/1392950860710936777/3s56QIdLBCHfJBPe32UKImt-UVfgv6RBfacyYwDLevIB_yeXMZgs5zPPsjqa6_MsBP2L';
 
     const discordMessage = {
         embeds: [{
